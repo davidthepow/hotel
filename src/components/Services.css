@@ -1,0 +1,128 @@
+.services {
+  padding: calc(var(--spacing) * 12) 0;
+  background: var(--bg-white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 10);
+}
+
+.service-card {
+  text-align: center;
+  padding: calc(var(--spacing) * 4);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background: var(--bg-light);
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  margin-bottom: calc(var(--spacing) * 2);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-title {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: calc(var(--spacing) * 1.5);
+}
+
+.service-description {
+  color: var(--text-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.services-extra {
+  margin-top: calc(var(--spacing) * 8);
+}
+
+.extra-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacing) * 5);
+  background: var(--bg-light);
+  border-radius: 12px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.extra-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 350px;
+}
+
+.extra-content {
+  padding: calc(var(--spacing) * 5);
+}
+
+.extra-content h3 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: calc(var(--spacing) * 3);
+}
+
+.extra-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: calc(var(--spacing) * 4);
+  font-size: 1.05rem;
+}
+
+.btn-extra {
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+  background: var(--primary);
+  color: var(--bg-white);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-extra:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 95, 77, 0.3);
+}
+
+@media (max-width: 968px) {
+  .services {
+    padding: calc(var(--spacing) * 8) 0;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .extra-card {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-image {
+    min-height: 250px;
+  }
+
+  .extra-content {
+    padding: calc(var(--spacing) * 4);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
